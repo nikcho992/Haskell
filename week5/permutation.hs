@@ -5,6 +5,6 @@ delete i (x:xs)
   |otherwise = x : delete i xs
   
  
- permutations :: (Eq a)[a] -> [[a]]
+ permutations :: (Eq a) => [a] -> [[a]]
  permutations [] = [[]]
  permutations xs = [x:ys | x <- xs, ys <- permutations (delete x xs)]
